@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfo0gjpup7bmm"]
+
+[ext_resource type="Script" uid="uid://bo1pe7b8tii2u" path="res://scripts/tela_inicial.gd" id="1_8bm7t"]
+[ext_resource type="FontFile" uid="uid://lmdw674tx3xs" path="res://fonts/PressStart/PressStart2P-Regular.ttf" id="1_g50o1"]
+[ext_resource type="Texture2D" uid="uid://c470r7yn51jev" path="res://art/telaInicial.png" id="2_8bm7t"]
+
+[node name="TelaInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8bm7t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 479.0
+offset_bottom = 267.0
+color = Color(0.176419, 0.176419, 0.176419, 1)
+
+[node name="TelaInicial" type="Sprite2D" parent="."]
+position = Vector2(510, 282)
+scale = Vector2(0.649284, 0.736747)
+texture = ExtResource("2_8bm7t")
+
+[node name="IniciarInspecao" type="Button" parent="."]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 340.0
+offset_right = 504.0
+offset_bottom = 362.0
+scale = Vector2(2.0949, -1.82779)
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 7
+
+[connection signal="pressed" from="IniciarInspecao" to="." method="_on_iniciar_inspecao_pressed"]
